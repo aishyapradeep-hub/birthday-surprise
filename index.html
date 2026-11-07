@@ -379,9 +379,68 @@ Your Meenu. ❤️
             ← Back to Music
         </button>
 
+        <button onclick="showBirthdayWish()" class="trophy-btn">
+    🎂 Make Your Birthday Wish!
+</button>
+
     </div>
 
 </main>
+
+
+<!-- 8. Birthday Wish Page -->
+<main id="birthdayWish" class="birthday-wish-page hidden">
+    <div class="wish-container">
+        <p class="wish-label">🎉 THE BIG BIRTHDAY MOMENT 🎉</p>
+
+        <h1>Make a Wish, Sachu! ❤️</h1>
+        <p class="wish-subtitle">
+            21 candles, 21 wishes, and a whole lot of love!
+        </p>
+
+        <div class="birthday-cake">
+            <div class="candles" id="candles">
+                <!-- 21 candles -->
+            </div>
+
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+            <div class="cake-plate"></div>
+        </div>
+
+        <p id="candleInstruction">
+            Close your eyes and make a wish! ✨
+        </p>
+
+        <button id="blowButton" onclick="blowCandles()">
+            💨 Make a Wish & Blow the Candles!
+        </button>
+
+        <div id="birthdayWishMessage" class="hidden">
+            <h2>🎂 HAPPY BIRTHDAY, SACHU! 🎂</h2>
+
+            <p>
+                May your 21st year be filled with happiness,
+                success, laughter and beautiful moments.
+                May every dream you chase come closer
+                and every step you take make you proud.
+            </p>
+
+            <h3>You deserve all the happiness in the world! ❤️</h3>
+
+            <p class="wish-signature">
+                With all my love,<br>
+                Your Meenu ❤️
+            </p>
+        </div>
+
+        <button class="wish-back-btn" onclick="backToFootball()">
+            ← Back to Stadium
+        </button>
+    </div>
+</main>
+
 
     <script src="script.js"></script>
 
