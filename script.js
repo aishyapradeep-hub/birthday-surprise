@@ -167,3 +167,88 @@ function revealTrophy() {
         .classList.remove("hidden");
 
 }
+
+
+// Create 21 birthday candles
+const candleContainer = document.getElementById("candles");
+
+if (candleContainer) {
+    for (let i = 0; i < 21; i++) {
+        const candle = document.createElement("div");
+        candle.className = "candle";
+
+        const flame = document.createElement("span");
+        flame.className = "flame";
+
+        candle.appendChild(flame);
+        candleContainer.appendChild(candle);
+    }
+}
+
+// Blow out all birthday candles
+function blowCandles() {
+    const candles = document.querySelectorAll("#candles .candle");
+
+    candles.forEach((candle, index) => {
+        setTimeout(() => {
+            candle.classList.add("blown");
+        }, index * 70);
+    });
+
+    document.getElementById("blowButton").disabled = true;
+    document.getElementById("blowButton").textContent = "✨ Wish Made!";
+
+    document.getElementById("candleInstruction").textContent =
+        "Your wish is on its way! 💫";
+
+    setTimeout(() => {
+        document.getElementById("birthdayWishMessage")
+            .classList.remove("hidden");
+
+        launchBirthdayConfetti();
+    }, 1800);
+}
+
+// Simple birthday confetti
+function launchBirthdayConfetti() {
+    for (let i = 0; i < 70; i++) {
+        const confetti = document.createElement("div");
+
+        confetti.textContent = ["🎉", "✨", "💖", "🎊"][
+            Math.floor(Math.random() * 4)
+        ];
+
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.top = "-30px";
+        confetti.style.fontSize = "20px";
+        confetti.style.zIndex = "100";
+        confetti.style.pointerEvents = "none";
+        confetti.style.animation =
+            `birthdayFall ${2 + Math.random() * 3}s linear forwards`;
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 5000);
+    }
+}
+
+// Navigation
+function showBirthdayWish() {
+    document.querySelectorAll("main").forEach(page => {
+        page.classList.add("hidden");
+    });
+
+    document.getElementById("birthdayWish").classList.remove("hidden");
+    document.getElementById("birthdayWish").scrollTop = 0;
+}
+
+function backToFootball() {
+    document.querySelectorAll("main").forEach(page => {
+        page.classList.add("hidden");
+    });
+
+    document.getElementById("football").classList.remove("hidden");
+    document.getElementById("football").scrollTop = 0;
+}
+
