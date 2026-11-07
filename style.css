@@ -917,3 +917,237 @@ input {
     }
 }
 
+
+/* BIRTHDAY WISH PAGE */
+#birthdayWish {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 25px 15px;
+    background: radial-gradient(circle at top, #741c45, #250018 80%);
+    color: white;
+    text-align: center;
+    z-index: 20;
+    -webkit-overflow-scrolling: touch;
+}
+
+.wish-container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+}
+
+.wish-label {
+    color: #ffd978;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.wish-container h1 {
+    font-size: 38px;
+    color: #ffb6d0;
+}
+
+.wish-subtitle {
+    color: #ffe0eb;
+}
+
+/* CAKE */
+.birthday-cake {
+    position: relative;
+    width: 280px;
+    height: 260px;
+    margin: 90px auto 25px;
+}
+
+.candles {
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    width: 230px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    z-index: 5;
+}
+
+.candle {
+    width: 7px;
+    height: 43px;
+    border-radius: 3px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff 0px,
+        #fff 5px,
+        #ff75a5 5px,
+        #ff75a5 9px
+    );
+    position: relative;
+}
+
+.flame {
+    position: absolute;
+    top: -19px;
+    left: 1px;
+    width: 6px;
+    height: 16px;
+    background: #ffdf6b;
+    border-radius: 50% 50% 40% 40%;
+    box-shadow: 0 0 12px #ffca45, 0 0 22px #ff8b35;
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1) rotate(-5deg); }
+    to { transform: scale(1.2) rotate(5deg); }
+}
+
+.candle.blown .flame {
+    display: none;
+}
+
+.candle.blown::after {
+    content: "〰";
+    position: absolute;
+    top: -23px;
+    left: -2px;
+    color: #ddd;
+    font-size: 14px;
+    animation: smoke 1s ease-out forwards;
+}
+
+@keyframes smoke {
+    from { opacity: 0.8; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-22px); }
+}
+
+/* CAKE LAYERS */
+.cake-top {
+    position: absolute;
+    top: 0;
+    left: 35px;
+    width: 210px;
+    height: 65px;
+    background: #ffb4ce;
+    border-radius: 50%;
+    border-bottom: 8px solid #e77ca3;
+    z-index: 3;
+}
+
+.cake-middle {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    width: 210px;
+    height: 75px;
+    background: #f18bb0;
+    border-radius: 8px 8px 20px 20px;
+    z-index: 2;
+}
+
+.cake-bottom {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    width: 250px;
+    height: 90px;
+    background: #ffcade;
+    border-radius: 12px 12px 30px 30px;
+    border-bottom: 10px solid #e77ca3;
+}
+
+.cake-plate {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 280px;
+    height: 18px;
+    background: #ffe5ef;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px #0005;
+}
+
+#candleInstruction {
+    font-size: 17px;
+    margin: 25px 0;
+}
+
+#blowButton,
+.wish-back-btn {
+    padding: 14px 22px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    background: #ff8eb6;
+    color: #4b102d;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#birthdayWishMessage {
+    max-width: 520px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff15;
+    border: 1px solid #ffb6d0;
+    border-radius: 20px;
+    animation: wishAppear 1s ease forwards;
+}
+
+#birthdayWishMessage h2 {
+    color: #ffd978;
+}
+
+#birthdayWishMessage p {
+    line-height: 1.8;
+}
+
+.wish-signature {
+    color: #ffb6d0;
+    font-weight: bold;
+}
+
+@keyframes wishAppear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    #birthdayWish {
+        padding: 18px 10px;
+    }
+
+    .wish-container {
+        padding: 12px;
+    }
+
+    .wish-container h1 {
+        font-size: 29px;
+    }
+
+    .birthday-cake {
+        transform: scale(0.85);
+        transform-origin: top center;
+        margin-bottom: -15px;
+    }
+
+    #birthdayWishMessage {
+        padding: 18px 12px;
+        font-size: 14px;
+    }
+}
+
+
+@keyframes birthdayFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
