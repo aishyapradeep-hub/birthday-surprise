@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Surprise For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="hearts" id="hearts"></div>
+
+    <!-- 1. Welcome Screen -->
+    <main class="welcome-card" id="welcome">
+
+        <div class="heart-icon">💗</div>
+
+        <p class="small-text">
+            A little surprise awaits you...
+        </p>
+
+        <h1>Hey, My Love!</h1>
+
+        <p class="description">
+            Someone special has prepared something
+            beautiful just for you.
+        </p>
+
+        <button onclick="showSurprise()">
+            Open Your Gift 🎁
+        </button>
+
+        <p class="footer-text">
+            Made with endless love ❤️
+        </p>
+
+    </main>
+
+
+    <!-- 2. Secret Password Screen -->
+    <main class="welcome-card hidden" id="secret">
+
+        <div class="heart-icon">🔐</div>
+
+        <h1>One Little Secret</h1>
+
+        <p class="description">
+            Before entering, answer this...
+            What's our special secret password?
+        </p>
+
+        <input type="password" id="password"
+               placeholder="Enter the secret password">
+
+        <button onclick="unlockGift()">
+            Unlock My Gift ❤️
+        </button>
+
+        <p id="error"></p>
+
+    </main>
+
+
+    <!-- 3. Birthday Celebration Screen -->
+    <main class="welcome-card hidden" id="birthday">
+
+        <p class="small-text">
+            Today is all about you...
+        </p>
+
+        <div class="cake">🎂</div>
+
+        <h1>Happy Birthday Sachu!</h1>
+
+        <p class="description">
+            To the most special person in my world...
+            May your life be filled with happiness,
+            success and endless smiles.
+        </p>
+
+        <h2 class="from-text">
+            Lots of love, Your Meenu ❤️
+        </h2>
+
+        <div class="balloons">
+            🎈 🎈 🎈
+        </div>
+
+        <button onclick="showLetter()">
+            A Little Letter For You 💌
+        </button>
+
+    </main>
+
+
+    <!-- 4. Love Letter Screen - Hidden Initially -->
+    <main class="welcome-card hidden" id="loveletter">
+
+        <div class="letter-scene">
+
+            <h1>For My Sachu ❤️</h1>
+
+            <p class="description">
+                Six years of us... and a letter from my heart.
+            </p>
+
+            <div class="envelope" id="envelope"
+                 onclick="openEnvelope()">
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-body">
+                    <span>❤️</span>
+                </div>
+
+                <p class="tap-text">
+                    Tap to open 💌
+                </p>
+
+            </div>
+
+            <!-- Actual Letter -->
+            <div class="letter-paper hidden" id="letterPaper">
+
+                <div class="letter-content">
+
+                    <h2>Dear Sachu,</h2>
+
+                    <p>
+                        Six years... Can you believe it?
+
+Six years since our story began. And sometimes I still think about those classroom days, when you were just my classmate, my friend, and someone I never knew would become such an important part of my life.
+                    </p>
+
+                    <p>
+                        Who would have thought that the person sitting beside me as a classmate would one day become my best friend, my love, my comfort and my favourite human?
+
+Sachu, you've seen so many versions of me. You've been there through my happiest moments, my silly talks, my tears, my overthinking and even the days when I couldn't explain what was happening inside my heart.
+                    </p>
+
+                    <p>
+                        You know something? Whenever my world falls apart, you're the person I run to. Not because you can magically fix everything, but because somehow, just having you beside me makes everything feel a little less difficult.
+
+You're my safe place. My comfort person. The one I want to tell every little thing that happens in my day.
+                    </p>
+
+                    <p>
+                        We've grown together, changed together, laughed over silly things, made memories and travelled through six beautiful years of love. Maybe everything hasn't always been perfect, but every moment has made our story ours.
+                    </p>
+
+                    <p>
+I don't know what the future has planned for us, but I know one thing: I want to keep making memories with you. I want to celebrate your victories, hold your hand through difficult days, annoy you with my silly talks, laugh with you over nothing and love you through every version of life.                    
+                    </p>
+
+                    <p>
+On your birthday, I wish you all the happiness this world can offer. I wish you success in everything you dream of. I hope life treats you gently and gives you a thousand reasons to smile.
+
+And whenever life gets difficult, remember that you have your Meenu. Someone who believes in you, is proud of you and loves you more than words can explain.                    
+                    </p>
+
+                    <p>
+Happy Birthday, my Sachu! 🎂❤️
+
+Thank you for being my classmate, my best friend, my love and my favourite part of life.
+
+Six years down, and my heart still chooses you.
+
+Forever and always,
+Your Meenu. ❤️                    
+                    </p>
+
+                    <h2>Forever yours,</h2>
+
+                    <h2 class="signature">
+                        Meenu ❤️
+                    </h2>
+<button onclick="showReasons()">
+    Discover Why I Love You 💗
+</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <main class="welcome-card hidden" id="reasons">
+    <h1>Reasons Why I Love You ❤️</h1>
+    <p class="subtitle">A little list for my favourite human...</p>
+
+    <div class="reasons-container">
+        <div class="reason-card">❤️ You are my safe place.</div>
+        <div class="reason-card">🥹 You understand me without words.</div>
+        <div class="reason-card">💕 You make ordinary moments special.</div>
+        <div class="reason-card">😂 You always know how to make me smile.</div>
+        <div class="reason-card">🫶 You are my best friend and my love.</div>
+        <div class="reason-card">🌍 You are the person I run to when life gets hard.</div>
+        <div class="reason-card">💗 I can always be myself around you.</div>
+        <div class="reason-card">♾️ My heart chooses you, every single day.</div>
+    </div>
+
+    <p class="final-message">
+        And the biggest reason of all...<br>
+        You're YOU, Sachu! ❤️
+        <button onclick="showMusic()" class="music-btn">
+    🎵 A Song Just for You, because YOU MATTER!!
+</button>
+    </p>
+
+</main>
+
+<!-- 6. Separate Music Page -->
+<main class="welcome-card hidden" id="music">
+
+    <div class="music-container">
+
+        <div class="music-icon">🎶</div>
+
+        <h1>From the bottom of my heart ❤️</h1>
+
+        <p class="music-message">
+            I made this song with all my love,
+            just for you. Every word carries
+            a little piece of my heart. ❤️
+        </p>
+
+        <div class="music-player">
+            <audio id="birthdaySong" controls>
+                <source src="audio/You Matter.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </div>
+
+        <p class="music-footer">
+            A little melody from my heart to yours 💗
+        </p>
+
+        <button onclick="showFootball()" class="football-btn">
+    ⚽ Enter Sachu's Stadium 🏟️
+</button>
+
+        <button onclick="backToReasons()" class="music-btn">
+            ← Back
+        </button>
+
+    </div>
+
+</main>
+
+<!-- 7. Sachu's Football Stadium Page -->
+<main class="football-page hidden" id="football">
+
+    <div class="stadium">
+
+        <div class="match-atmosphere" aria-hidden="true">
+
+    <!-- Moving stadium lights -->
+    <div class="spotlight spotlight-one"></div>
+    <div class="spotlight spotlight-two"></div>
+    <div class="spotlight spotlight-three"></div>
+
+    <!-- Cheering crowd -->
+    <div class="crowd-cheer">
+        🙌 🙌 👏 🙌 👏 🙌 🙌 👏 🙌
+    </div>
+
+    <!-- Moving football -->
+    <div class="animated-pitch">
+        <span class="rolling-ball">⚽</span>
+    </div>
+
+</div>
+
+        <div class="stadium-lights">✨ ⚽ ✨</div>
+
+        <p class="match-label">🏟️ SPECIAL BIRTHDAY MATCH</p>
+
+        <h1>SACHU'S HALL OF FAME</h1>
+
+        <h2>THE 21ST SEASON 🏆</h2>
+
+        <div class="scoreboard">
+            <p class="matchday">MATCH DAY 13</p>
+
+            <div class="teams">
+                <div>
+                    <div class="team-icon">❤️</div>
+                    <h3>SACHU</h3>
+                    <p>OUR NUMBER ONE</p>
+                </div>
+
+                <div class="score">21</div>
+
+                <div>
+                    <div class="team-icon">⚽</div>
+                    <h3>THE WORLD</h3>
+                    <p>LUCKY TO HAVE YOU</p>
+                </div>
+            </div>
+
+            <p class="match-status">FULL TIME • YOU ARE THE WINNER!</p>
+        </div>
+
+        <div class="jersey">
+            <div class="jersey-number">21</div>
+            <p>SACHU</p>
+        </div>
+
+        <h2 class="player-title">
+            PLAYER OF MY LIFE ❤️
+        </h2>
+
+        <p class="stadium-message">
+            Every great player has a story.
+            And yours is only getting started.
+        </p>
+
+        <div class="player-stats">
+
+            <div class="stat-card">
+                <span>🏆</span>
+                <h3>21</h3>
+                <p>Years of greatness</p>
+            </div>
+
+            <div class="stat-card">
+                <span>❤️</span>
+                <h3>100%</h3>
+                <p>My favourite person</p>
+            </div>
+
+            <div class="stat-card">
+                <span>♾️</span>
+                <h3>Forever</h3>
+                <p>My biggest support</p>
+            </div>
+
+        </div>
+
+        <button class="trophy-btn" onclick="revealTrophy()">
+            🏆 Claim Your Birthday Trophy
+        </button>
+
+        <div id="trophyMessage" class="trophy-message hidden">
+
+            <h2>🏆 THE GOLDEN HEART AWARD 🏆</h2>
+
+            <p>
+                Awarded to Sachu,
+                for being an amazing human,
+                for chasing his dreams,
+                and for making my world
+                a little more beautiful.
+            </p>
+
+            <h3>I'm so proud of you! ❤️</h3>
+
+            <p class="award-signature">
+                Your biggest fan,<br>
+                MEENU ❤️
+            </p>
+
+        </div>
+
+        <p class="final-whistle">
+            No matter how many matches life brings,
+            I'll always be cheering for you! 📣❤️
+        </p>
+
+        <button onclick="backToMusic()" class="football-btn">
+            ← Back to Music
+        </button>
+
+    </div>
+
+</main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
