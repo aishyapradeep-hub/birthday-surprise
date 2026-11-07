@@ -1,0 +1,919 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #250018, #741c45, #d65b83);
+    overflow: hidden;
+    color: white;
+}
+
+.welcome-card {
+    width: 90%;
+    max-width: 430px;
+    padding: 45px 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: appear 1.2s ease;
+    z-index: 2;
+}
+
+.heart-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+    animation: heartbeat 1.5s infinite;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #ffb6cf;
+    margin: 15px 0;
+}
+
+.small-text, .footer-text {
+    color: #ffd8e5;
+    font-size: 13px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+button {
+    background: #ff8fb3;
+    color: #4b102b;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+    background: #ffc1d6;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#error {
+    color: #ffd0dd;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.2); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -30px;
+    animation: floatUp 7s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Birthday celebration */
+
+.cake {
+    font-size: 90px;
+    margin: 20px 0;
+    animation: cakeBounce 1.5s infinite;
+}
+
+@keyframes cakeBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.from-text {
+    color: #ffb6cf;
+    font-family: 'Great Vibes', cursive;
+    font-size: 27px;
+    margin: 20px 0;
+}
+
+.balloons {
+    font-size: 35px;
+    margin: 20px 0;
+    animation: balloonFloat 2s infinite alternate;
+}
+
+@keyframes balloonFloat {
+    from { transform: translateY(5px); }
+    to { transform: translateY(-12px); }
+}
+
+/* Fireworks effect */
+
+.firework {
+    position: fixed;
+    font-size: 25px;
+    pointer-events: none;
+    z-index: 5;
+    animation: burst 1.5s ease-out forwards;
+}
+
+@keyframes burst {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.letter-scene {
+    text-align: center;
+}
+
+.envelope {
+    position: relative;
+    width: 250px;
+    height: 165px;
+    background: #ff9fbd;
+    margin: 60px auto 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.envelope-body {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-top: 100px solid #ff6f9f;
+    transform-origin: top;
+    transition: transform 0.8s;
+    z-index: 2;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.tap-text {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    color: #ffd5e4;
+    font-size: 13px;
+}
+
+.letter-paper {
+    background: #fff0f4;
+    color: #64243f;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 450px;
+    text-align: left;
+    animation: appear 1s ease;
+    line-height: 1.9;
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 25px;
+    scroll-behavior: smooth;
+}
+
+.letter-content h2 {
+    color: #b83269;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.letter-content p {
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.signature {
+    text-align: right;
+}
+
+#letterPaper::-webkit-scrollbar {
+    width: 6px;
+}
+
+#letterPaper::-webkit-scrollbar-track {
+    background: #ffe4ec;
+    border-radius: 10px;
+}
+
+#letterPaper::-webkit-scrollbar-thumb {
+    background: #e75480;
+    border-radius: 10px;
+}
+
+#letterPaper::-webkit-scrollbar-thumb:hover {
+    background: #c2185b;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.reason-card {
+    background: rgba(255, 255, 255, 0.85);
+    color: #c2185b;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: appear 1s ease;
+    transition: transform 0.3s;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+}
+
+.final-message {
+    margin-top: 30px;
+    color: #880e4f;
+    background: #ffe4ec;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(136, 14, 79, 0.2);
+}
+
+@media (max-width: 600px) {
+    .reasons-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#reasons {
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Pink scrollbar */
+#reasons::-webkit-scrollbar {
+    width: 8px;
+}
+
+#reasons::-webkit-scrollbar-track {
+    background: #ffe6f2;
+    border-radius: 10px;
+}
+
+#reasons::-webkit-scrollbar-thumb {
+    background: #d63384;
+    border-radius: 10px;
+}
+
+#reasons::-webkit-scrollbar-thumb:hover {
+    background: #a02080;
+}
+
+/* FOOTBALL STADIUM PAGE */
+
+/* FOOTBALL STADIUM PAGE */
+
+/* FOOTBALL PAGE - ONLY THIS PAGE SCROLLS */
+
+#football {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    background: radial-gradient(ellipse at top, #315c42, #10251d 75%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+#football.hidden {
+    display: none !important;
+}
+
+#football::-webkit-scrollbar {
+    width: 8px;
+}
+
+#football::-webkit-scrollbar-track {
+    background: #183b2b;
+}
+
+#football::-webkit-scrollbar-thumb {
+    background: #e9c96d;
+    border-radius: 10px;
+}
+
+.stadium {
+    max-width: 750px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.stadium-lights {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.match-label {
+    color: #e9c96d;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.football-page h1 {
+    color: white;
+    font-size: clamp(25px, 5vw, 40px);
+    margin: 15px 0;
+}
+
+.football-page h2 {
+    color: #f2d47c;
+}
+
+.scoreboard {
+    background: linear-gradient(135deg, #183b2b, #285a3c);
+    border: 2px solid #d8b75b;
+    border-radius: 18px;
+    padding: 22px 12px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px #0005;
+}
+
+.matchday {
+    color: #f2d47c;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.team-icon {
+    font-size: 38px;
+}
+
+.teams h3 {
+    font-size: 17px;
+}
+
+.teams p {
+    font-size: 10px;
+    color: #d5e4d8;
+}
+
+.score {
+    font-size: 65px;
+    font-weight: bold;
+    color: #f2d47c;
+}
+
+.match-status {
+    color: #c9e8d0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.jersey {
+    width: 170px;
+    height: 190px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #f7f1e9, #d9c9b5);
+    color: #173c2a;
+    clip-path: polygon(
+        25% 0, 40% 8%, 60% 8%, 75% 0,
+        100% 18%, 85% 42%, 75% 35%,
+        75% 100%, 25% 100%, 25% 35%,
+        15% 42%, 0 18%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.jersey-number {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.jersey p {
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.player-title {
+    font-size: 25px;
+}
+
+.stadium-message {
+    line-height: 1.8;
+    color: #e1eee4;
+}
+
+.player-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: #ffffff12;
+    border: 1px solid #e3c76b;
+    border-radius: 15px;
+    padding: 15px 8px;
+}
+
+.stat-card span {
+    font-size: 25px;
+}
+
+.stat-card h3 {
+    color: #f2d47c;
+    font-size: 20px;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #dce9df;
+}
+
+.football-btn,
+.trophy-btn {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 22px;
+    margin: 12px 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.football-btn {
+    background: #f2d47c;
+    color: #173c2a;
+}
+
+.trophy-btn {
+    background: #ffffff;
+    color: #173c2a;
+}
+
+.trophy-message {
+    background: #fff9e8;
+    color: #29452f;
+    border-radius: 18px;
+    padding: 25px 18px;
+    margin: 25px 0;
+    line-height: 1.8;
+    animation: trophyReveal 0.8s ease;
+}
+
+.trophy-message h2 {
+    color: #956c17;
+}
+
+.award-signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 25px;
+}
+
+.final-whistle {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: #f2d47c;
+    margin: 35px 0;
+}
+
+@keyframes trophyReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .player-stats {
+        gap: 6px;
+    }
+
+    .stat-card {
+        padding: 12px 4px;
+    }
+
+    .stat-card p {
+        font-size: 10px;
+    }
+
+    .score {
+        font-size: 48px;
+    }
+
+    .teams h3 {
+        font-size: 13px;
+    }
+}
+
+
+/* STADIUM ATMOSPHERE ANIMATIONS */
+
+#football .stadium {
+    position: relative;
+}
+
+/* Keep the effects behind the stadium content */
+#football .match-atmosphere {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#football .stadium > *:not(.match-atmosphere) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Moving spotlights */
+#football .spotlight {
+    position: absolute;
+    top: -100px;
+    width: 35%;
+    height: 450px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 220, 0.35),
+        rgba(255, 255, 220, 0)
+    );
+    clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+    transform-origin: top center;
+    filter: blur(12px);
+}
+
+#football .spotlight-one {
+    left: 5%;
+    animation: lightOne 5s ease-in-out infinite alternate;
+}
+
+#football .spotlight-two {
+    left: 35%;
+    animation: lightTwo 6s ease-in-out infinite alternate;
+}
+
+#football .spotlight-three {
+    right: 5%;
+    animation: lightThree 4s ease-in-out infinite alternate;
+}
+
+@keyframes lightOne {
+    from { transform: rotate(-25deg); opacity: 0.3; }
+    to { transform: rotate(25deg); opacity: 0.8; }
+}
+
+@keyframes lightTwo {
+    from { transform: rotate(20deg); opacity: 0.2; }
+    to { transform: rotate(-20deg); opacity: 0.7; }
+}
+
+@keyframes lightThree {
+    from { transform: rotate(25deg); opacity: 0.3; }
+    to { transform: rotate(-25deg); opacity: 0.8; }
+}
+
+/* Cheering crowd */
+#football .crowd-cheer {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 25px;
+    opacity: 0.22;
+    letter-spacing: 8px;
+    animation: crowdJump 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes crowdJump {
+    from { transform: translateY(0); }
+    to { transform: translateY(-12px); }
+}
+
+/* Animated football pitch */
+#football .animated-pitch {
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    width: 90%;
+    height: 55px;
+    border-top: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+#football .rolling-ball {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 30px;
+    animation: ballRoll 5s linear infinite alternate;
+}
+
+@keyframes ballRoll {
+    from {
+        left: 0;
+        transform: rotate(0deg);
+    }
+    to {
+        left: calc(100% - 35px);
+        transform: rotate(720deg);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    #football .crowd-cheer {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    #football .spotlight {
+        height: 300px;
+    }
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE DESIGN
+   ================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Main page layout */
+    body {
+        min-height: 100vh;
+        padding: 15px 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    /* Welcome, password, birthday, letter and music cards */
+    .welcome-card {
+        width: 92%;
+        max-width: 430px;
+        padding: 30px 18px;
+        margin: 15px auto;
+        border-radius: 20px;
+    }
+
+    .welcome-card h1 {
+        font-size: 42px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    button {
+        max-width: 100%;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    /* Birthday cake */
+    .cake {
+        font-size: 70px;
+    }
+
+    .balloons {
+        font-size: 28px;
+    }
+
+    /* Love letter */
+    .envelope {
+        max-width: 230px;
+    }
+
+    .letter-paper {
+        width: 100%;
+        max-height: 55vh;
+        padding: 18px;
+    }
+
+    /* Reasons page */
+    #reasons {
+        width: 100%;
+        max-height: 100vh;
+        padding: 25px 15px;
+    }
+
+    .reasons-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .reason-card {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    .final-message {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    /* Music page */
+    .music-container {
+        width: 100%;
+    }
+
+    #music audio {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Football stadium */
+    #football {
+        padding: 18px 12px;
+    }
+
+    #football .stadium {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    #football h1 {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    #football h2 {
+        font-size: 21px;
+    }
+
+    #football .scoreboard {
+        padding: 18px 8px;
+        margin: 22px 0;
+    }
+
+    #football .teams {
+        gap: 5px;
+    }
+
+    #football .teams h3 {
+        font-size: 12px;
+    }
+
+    #football .teams p {
+        font-size: 9px;
+    }
+
+    #football .team-icon {
+        font-size: 28px;
+    }
+
+    #football .score {
+        font-size: 42px;
+    }
+
+    #football .jersey {
+        transform: scale(0.9);
+        margin: 15px auto;
+    }
+
+    #football .player-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #football .stat-card {
+        padding: 16px;
+    }
+
+    #football .stat-card p {
+        font-size: 12px;
+    }
+
+    #football .football-btn,
+    #football .trophy-btn {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #football .trophy-message {
+        padding: 20px 12px;
+        font-size: 13px;
+    }
+
+    #football .final-whistle {
+        font-size: 15px;
+    }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 360px) {
+
+    .welcome-card {
+        padding: 25px 14px;
+    }
+
+    .welcome-card h1 {
+        font-size: 36px;
+    }
+
+    #football .teams h3 {
+        font-size: 10px;
+    }
+
+    #football .score {
+        font-size: 35px;
+    }
+}
+
