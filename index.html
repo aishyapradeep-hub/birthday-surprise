@@ -28,17 +28,13 @@
         <h1>Hey, My Love!</h1>
 
         <p class="description">
-            Someone special has prepared something
-            beautiful just for you.
+            Something special just for you.<br>
+            Made with endless love ❤️
         </p>
 
         <button onclick="showSurprise()">
-            Open Your Gift 🎁
+            🎁 Open Your Gift 🎁
         </button>
-
-        <p class="footer-text">
-            Made with endless love ❤️
-        </p>
 
     </main>
 
@@ -46,17 +42,19 @@
     <!-- 2. Secret Password Screen -->
     <main class="welcome-card hidden" id="secret">
 
-        <div class="heart-icon">🔐</div>
+        <div class="heart-icon">💘</div>
 
         <h1>One Little Secret</h1>
 
         <p class="description">
-            Before entering, answer this...
-            What's our special secret password?
+            Before entering, answer this...<br>
+            If I were a worm, would you still love me?<br>
+            If I were a potato, would you still marry me?<br>
+            And if I were none of these...<br>WHAT DO YOU FEEL FOR ME??
         </p>
 
         <input type="password" id="password"
-               placeholder="Enter the secret password">
+               placeholder="Hint: It's what I feel for you!">
 
         <button onclick="unlockGift()">
             Unlock My Gift ❤️
@@ -89,7 +87,7 @@
         </h2>
 
         <div class="balloons">
-            🎈 🎈 🎈
+            🍾 🍾 🍾
         </div>
 
         <button onclick="showLetter()">
@@ -107,7 +105,7 @@
             <h1>For My Sachu ❤️</h1>
 
             <p class="description">
-                Six years of us... and a letter from my heart.
+                A letter from my heart.
             </p>
 
             <div class="envelope" id="envelope"
@@ -141,7 +139,7 @@ Six years since our story began. And sometimes I still think about those classro
                     <p>
                         Who would have thought that the person sitting beside me as a classmate would one day become my best friend, my love, my comfort and my favourite human?
 
-Sachu, you've seen so many versions of me. You've been there through my happiest moments, my silly talks, my tears, my overthinking and even the days when I couldn't explain what was happening inside my heart.
+Eda, you've seen so many versions of me. You've been there through my happiest moments, my silly talks, my tears, my overthinking and even the days when I couldn't explain what was happening inside my heart.
                     </p>
 
                     <p>
@@ -161,13 +159,13 @@ I don't know what the future has planned for us, but I know one thing: I want to
                     <p>
 On your birthday, I wish you all the happiness this world can offer. I wish you success in everything you dream of. I hope life treats you gently and gives you a thousand reasons to smile.
 
-And whenever life gets difficult, remember that you have your Meenu. Someone who believes in you, is proud of you and loves you more than words can explain.                    
+And whenever life gets difficult, remember that you have your Jelly. Someone who believes in you, is proud of you and loves you more than words can explain.                    
                     </p>
 
                     <p>
-Happy Birthday, my Sachu! 🎂❤️
+Happy Birthday, my Chachu! 🎂❤️
 
-Thank you for being my classmate, my best friend, my love and my favourite part of life.
+Thank you for being my best friend, my love and my favourite part of life.
 
 Six years down, and my heart still chooses you.
 
@@ -181,7 +179,7 @@ Your Meenu. ❤️
                         Meenu ❤️
                     </h2>
 <button onclick="showReasons()">
-    Discover Why I Love You 💗
+    Little Things I Adore About You 💗
 </button>
 
                 </div>
@@ -193,8 +191,9 @@ Your Meenu. ❤️
     </main>
 
     <main class="welcome-card hidden" id="reasons">
-    <h1>Reasons Why I Love You ❤️</h1>
-    <p class="subtitle">A little list for my favourite human...</p>
+    <h1>A million little reasons, and yet no particular reason at all ❤️</h1>
+    <p class="subtitle"><i>If someone asks me why I love you, I could list a thousand things. But none of them would explain how it all started.
+</i></p>
 
     <div class="reasons-container">
         <div class="reason-card">❤️ You are my safe place.</div>
@@ -209,7 +208,7 @@ Your Meenu. ❤️
 
     <p class="final-message">
         And the biggest reason of all...<br>
-        You're YOU, Sachu! ❤️
+        You're YOU, Chachu! ❤️
         <button onclick="showMusic()" class="music-btn">
     🎵 A Song Just for You, because YOU MATTER!!
 </button>
@@ -234,9 +233,102 @@ Your Meenu. ❤️
 
         <div class="music-player">
             <audio id="birthdaySong" controls>
-                <source src="audio/You Matter.mp3" type="audio/mpeg">
+                <source src="audio/My_Favourite_Hello.mp3" type="audio/mpeg">
                 Your browser does not support audio.
             </audio>
+            
+            
+<!-- Synchronized Lyrics -->
+<div class="lyrics-section">
+    <h2>❤️ Sing Along With Me ❤️</h2>
+    <p class="lyrics-subtitle">Every word comes straight from my heart</p>
+
+    <div class="lyrics-box" id="lyricsBox">
+
+        <div class="lyric-group">
+            <h3>❤️</h3>
+            <p class="lyric-line" data-start="0">I don't know how you do it,</p>
+            <p class="lyric-line" data-start="5">But you make my whole day bright,</p>
+            <p class="lyric-line" data-start="7">Even when the world feels crazy,</p>
+            <p class="lyric-line" data-start="12">You somehow make it right.</p>
+        </div>
+
+        <div class="lyric-group">
+            <h3>❤️</h3>
+            <p class="lyric-line" data-start="15">I love the way you laugh at silly things,</p>
+            <p class="lyric-line" data-start="18">The little joy that every moment brings,</p>
+            <p class="lyric-line" data-start="22">The way you talk,</p>
+            <p class="lyric-line" data-start="23">the way you smile,</p>
+            <p class="lyric-line" data-start="26">You make everything</p>
+            <p class="lyric-line" data-start="27">feel worthwhile.</p>
+            <p class="lyric-line" data-start="29">We have our moments,</p>
+            <p class="lyric-line" data-start="30">we have our fights,</p>
+            <p class="lyric-line" data-start="32">But you're still my favourite part of life,</p>
+            <p class="lyric-line" data-start="34">And if I had to choose again,</p>
+            <p class="lyric-line" data-start="36">I'd still choose you, my love, my friend.</p>
+            <p class="lyric-line" data-start="38">So come a little closer,</p>
+            <p class="lyric-line" data-start="40">Let the music play,</p>
+            <p class="lyric-line" data-start="42">I've got a million little reasons</p>
+            <p class="lyric-line" data-start="44">To celebrate you today.</p>
+
+
+        </div>
+
+        <div class="lyric-group">
+            <h3>❤️</h3>
+            <p class="lyric-line" data-start="46">You're my favourite hello,</p>
+            <p class="lyric-line" data-start="48">My sweetest goodnight,</p>
+            <p class="lyric-line" data-start="51">The one who makes my ordinary</p>
+            <p class="lyric-line" data-start="54">Feel like something bright.</p>
+            <p class="lyric-line" data-start="56">And I don't need a perfect world,</p>
+            <p class="lyric-line" data-start="59">As long as you're around,</p>
+            <p class="lyric-line" data-start="61">You're my favourite kind of love,</p>
+            <p class="lyric-line" data-start="63">The best thing I've ever found.</p>
+        </div>
+
+        <div class="lyric-group">
+            <h3>❤️</h3>
+            <p class="lyric-line" data-start="68">Keep chasing every dream you have,</p>
+            <p class="lyric-line" data-start="71">Keep being wonderfully you,</p>
+            <p class="lyric-line" data-start="73">I hope the world gives back to you</p>
+            <p class="lyric-line" data-start="77">All the happiness you give me too.</p>
+            <p class="lyric-line" data-start="80">Through every high and every low,</p>
+            <p class="lyric-line" data-start="84">There's one thing I want you to know,</p>
+            <p class="lyric-line" data-start="86">I'm always proud of who you are,</p>
+            <p class="lyric-line" data-start="89">My favourite person, my shining star.</p>
+        </div>
+
+        <div class="lyric-group">
+            <h3>🎂</h3>
+            <p class="lyric-line" data-start="107">Tonight the lights are shining bright,</p>
+            <p class="lyric-line" data-start="111">Twenty-one candles, make a wish tonight,</p>
+            <p class="lyric-line" data-start="115">May every dream come into view,</p>
+            <p class="lyric-line" data-start="118">The world deserves the best of you!</p>
+        </div>
+
+        <div class="lyric-group">
+            <h3>❤️</h3>
+            <p class="lyric-line" data-start="123">You're my favourite hello,</p>
+            <p class="lyric-line" data-start="125">My sweetest goodnight,</p>
+            <p class="lyric-line" data-start="128">The one who makes my ordinary</p>
+            <p class="lyric-line" data-start="131">Feel like something bright.</p>
+            <p class="lyric-line" data-start="134">So here's to you, your dreams, your smile,</p>
+            <p class="lyric-line" data-start="136">To every beautiful mile,</p>
+            <p class="lyric-line" data-start="138">Happy birthday, my favourite one,</p>
+            <p class="lyric-line" data-start="141">My love for you has just begun!</p>
+        </div>
+
+        <div class="lyric-group">
+            <h3>❤️</h3>
+            <p class="lyric-line" data-start="147">If I could give you one thing,</p>
+            <p class="lyric-line" data-start="150">I'd give you the way I see you,</p>
+            <p class="lyric-line" data-start="153">So you'd know just how special</p>
+            <p class="lyric-line" data-start="155">You really are to me.</p>
+        </div>
+
+    </div>
+</div>
+
         </div>
 
         <p class="music-footer">
@@ -244,7 +336,7 @@ Your Meenu. ❤️
         </p>
 
         <button onclick="showFootball()" class="football-btn">
-    ⚽ Enter Sachu's Stadium 🏟️
+    ⚽ Enter Sachu's Stadium ⚽
 </button>
 
         <button onclick="backToReasons()" class="music-btn">
@@ -281,7 +373,7 @@ Your Meenu. ❤️
 
         <div class="stadium-lights">✨ ⚽ ✨</div>
 
-        <p class="match-label">🏟️ SPECIAL BIRTHDAY MATCH</p>
+        <p class="match-label"> SPECIAL BIRTHDAY MATCH</p>
 
         <h1>SACHU'S HALL OF FAME</h1>
 
@@ -410,11 +502,12 @@ Your Meenu. ❤️
         </div>
 
         <p id="candleInstruction">
-            Close your eyes and make a wish! ✨
+            Close your eyes and make a wish! ✨<br>
+            No cheating, close your eyes 🫣
         </p>
 
         <button id="blowButton" onclick="blowCandles()">
-            💨 Make a Wish & Blow the Candles!
+            Make a Wish & Blow the Candles!
         </button>
 
         <div id="birthdayWishMessage" class="hidden">
