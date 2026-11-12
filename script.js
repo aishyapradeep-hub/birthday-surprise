@@ -252,3 +252,65 @@ function backToFootball() {
     document.getElementById("football").scrollTop = 0;
 }
 
+
+
+
+/* SYNCHRONIZED LYRICS */
+
+const birthdayAudio = document.getElementById("birthdaySong");
+const lyricLines = document.querySelectorAll(
+    "#music .lyric-line"
+);
+
+if (birthdayAudio && lyricLines.length > 0) {
+
+    let currentLyricIndex = -1;
+
+    birthdayAudio.addEventListener("timeupdate", () => {
+
+        const currentTime = birthdayAudio.currentTime;
+        let activeIndex = -1;
+
+        lyricLines.forEach((line, index) => {
+            const startTime = Number(line.dataset.start);
+
+            if (currentTime >= startTime) {
+                activeIndex = index;
+            }
+        });
+
+        if (activeIndex !== currentLyricIndex) {
+
+            lyricLines.forEach((line, index) => {
+                line.classList.remove("active", "passed");
+
+                if (index < activeIndex) {
+                    line.classList.add("passed");
+                }
+            });
+
+            if (activeIndex >= 0) {
+                const activeLine = lyricLines[activeIndex];
+
+                activeLine.classList.add("active");
+
+                activeLine.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+
+            currentLyricIndex = activeIndex;
+        }
+    });
+
+    // Click a lyric to jump to that part of the song
+    lyricLines.forEach(line => {
+        line.addEventListener("click", () => {
+            birthdayAudio.currentTime =
+                Number(line.dataset.start);
+
+            birthdayAudio.play();
+        });
+    });
+}
