@@ -1151,3 +1151,93 @@ input {
     }
 }
 
+
+/* SYNCHRONIZED SONG LYRICS */
+
+#music .lyrics-section {
+    width: 100%;
+    max-width: 520px;
+    margin: 30px auto;
+}
+
+#music .lyrics-section h2 {
+    color: #ffb6d0;
+    font-size: 24px;
+}
+
+#music .lyrics-subtitle {
+    color: #eac5d5;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+#music .lyrics-box {
+    height: 350px;
+    overflow-y: auto;
+    padding: 22px 15px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,182,208,0.3);
+    scroll-behavior: smooth;
+}
+
+#music .lyric-group {
+    margin-bottom: 35px;
+}
+
+#music .lyric-group h3 {
+    color: #ffd978;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+#music .lyric-line {
+    color: rgba(255,255,255,0.45);
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 12px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#music .lyric-line.active {
+    color: #ffb6d0;
+    font-size: 19px;
+    font-weight: bold;
+    transform: scale(1.03);
+    text-shadow: 0 0 15px rgba(255,182,208,0.6);
+}
+
+#music .lyric-line.passed {
+    color: rgba(255,255,255,0.7);
+}
+
+#music .lyrics-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+#music .lyrics-box::-webkit-scrollbar-thumb {
+    background: #ff8eb6;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    #music .lyrics-section h2 {
+        font-size: 21px;
+    }
+
+    #music .lyrics-box {
+        height: 300px;
+        padding: 18px 10px;
+    }
+
+    #music .lyric-line {
+        font-size: 14px;
+    }
+
+    #music .lyric-line.active {
+        font-size: 17px;
+    }
+}
+
